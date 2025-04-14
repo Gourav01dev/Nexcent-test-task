@@ -7,12 +7,12 @@ type OverlayCardProps = {
   link: string;
 };
 
-export default function OverlayCard({
+const OverlayCard: React.FC<OverlayCardProps> = ({
   image,
   imageAlt,
   description,
   link,
-}: OverlayCardProps) {
+}) => {
   return (
     <div className="relative bg-gray-50 rounded-xl shadow-md">
       <Image
@@ -31,3 +31,4 @@ export default function OverlayCard({
     </div>
   );
 }
+export default OverlayCard;

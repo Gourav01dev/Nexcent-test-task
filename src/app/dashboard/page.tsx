@@ -10,7 +10,7 @@ import TestimonialSection from "../components/TestimonialSection";
 const Dashboard: React.FC = () => {
   return (
     <>
-      <div className="px-6 py-12 bg-gray-50">
+      <div className="relative px-6 py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto w-full flex justify-between text-start">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -32,6 +32,9 @@ const Dashboard: React.FC = () => {
               height={283.3}
             />
           </div>
+        </div>
+        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2">
+          <Image src="/images/Dot.svg" alt="Icon" width={30} height={20} />
         </div>
       </div>
       <Clients />
