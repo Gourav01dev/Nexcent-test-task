@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Clients from "../components/Client";
 import Features from "../components/Features";
@@ -6,36 +5,13 @@ import Common from "../components/Common";
 import StatsSection from "../components/StatsSection";
 import BlogCards from "../components/BlogCards";
 import TestimonialSection from "../components/TestimonialSection";
+import Carousel from "../components/Carousel";
 
 const Dashboard: React.FC = () => {
   return (
     <>
       <div className="relative px-6 py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto w-full flex justify-between text-start">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
-              Lessons and insights <br />
-              <span className="text-green-600">from 8 years</span>
-            </h2>
-            <p className="mt-4 text-gray-600">
-              Where to grow your business as a photographer: site or social media?
-            </p>
-            <button className="mt-6 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition">
-              Register
-            </button>
-          </div>
-          <div className="flex justify-center">
-            <Image
-              src="/images/Illustration.png"
-              alt="Image"
-              width={272.16}
-              height={283.3}
-            />
-          </div>
-        </div>
-        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2">
-          <Image src="/images/Dot.svg" alt="Icon" width={30} height={20} />
-        </div>
+        <Carousel/>
       </div>
       <Clients />
       <Features />

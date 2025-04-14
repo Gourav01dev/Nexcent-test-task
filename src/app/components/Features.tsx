@@ -1,32 +1,7 @@
 import React from "react";
 import Image from "next/image";
-
-interface FeatureItem {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const features: FeatureItem[] = [
-  {
-    title: "Membership Organisations",
-    description:
-      "Our membership management software provides full automation of membership renewals and payments",
-    icon: "/images/features/icon-1.svg",
-  },
-  {
-    title: "National Associations",
-    description:
-      "Our membership management software provides full automation of membership renewals and payments",
-    icon: "/images/features/icon-2.svg",
-  },
-  {
-    title: "Clubs And Groups",
-    description:
-      "Our membership management software provides full automation of membership renewals and payments",
-    icon: "/images/features/icon-3.svg",
-  },
-];
+import { features } from "../utils/helper";
+import { FeatureItem } from "../utils/interface";
 
 const Features: React.FC = () => {
   return (
@@ -41,23 +16,23 @@ const Features: React.FC = () => {
       </div>
 
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto mt-10">
-        {features.map((feature, index) => (
+        {features.map((feature: FeatureItem, index: number) => (
           <div
             key={index}
             className="bg-white rounded-lg shadow-md p-6 text-center"
           >
             <div className="flex justify-center mb-4">
               <Image
-                src={feature.icon}
+                src={feature?.icon}
                 alt={feature.title}
                 width={60}
                 height={60}
               />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              {feature.title}
+              {feature?.title}
             </h3>
-            <p className="text-gray-600 text-sm">{feature.description}</p>
+            <p className="text-gray-600 text-sm">{feature?.description}</p>
           </div>
         ))}
       </div>

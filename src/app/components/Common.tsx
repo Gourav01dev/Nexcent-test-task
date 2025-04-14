@@ -1,12 +1,5 @@
 import Image from "next/image";
-
-interface CommonProps {
-  imageSrc: string;
-  title: string;
-  description: string;
-  buttonText: string;
-  reverse?: boolean;
-}
+import { CommonProps } from "../utils/interface";
 
 const Common = ({
   imageSrc,
